@@ -6,4 +6,6 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 SETING KeyRepeat on Mac
 `
 defaults write -g InitialKeyRepeat -int 8
-defaults write -g KeyRepeat -int 1`
+defaults write -g KeyRepeat -int 1
+defaults write -g ApplePressAndHoldEnabled -bool false
+`
