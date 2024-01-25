@@ -6,10 +6,17 @@ return {
       -- add a keymap to browse plugin files
       -- stylua: ignore
       {
-        "<leader>fxc",
+        "<leader>fp",
         function() require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root }) end,
         desc = "Find Plugin File",
       },
+      -- find hidden and ignore files
+      {
+        "<leader>fh",
+        function() require("telescope.builtin").find_files({ hidden=true, ignore=true, no_ignore=true }) end,
+        desc = "Find Plugin File",
+      },
+
     },
     -- change some options
     opts = {
@@ -19,11 +26,6 @@ return {
         sorting_strategy = "ascending",
         winblend = 0,
       },
-      pickers = {
-        find_files = {
-        theme = "Ivy",
-        }
-      },
     },
   },
 
@@ -31,32 +33,11 @@ return {
   {
     "telescope.nvim",
     dependencies = {
-      {
-        -- project management
-        {
-          "ahmedkhalf/project.nvim",
-          opts = {
-            manual_mode = true,
-          },
-          event = "VeryLazy",
-          config = function(_, opts)
-            require("project_nvim").setup(opts)
-            require("lazyvim.util").on_load("telescope.nvim", function()
-            require("telescope").load_extension("projects")
-            end)
-          end,
-          keys = {
-            { "<leader>fp", "<Cmd>Telescope projects<CR>", desc = "Projects" },
-          },
-        },
-        {
-          "nvim-telescope/telescope-fzf-native.nvim",
-          build = "make",
-          config = function()
-              require("telescope").load_extension("fzf")
-          end,
-        }
-      },
+      "nvim-telescope/telescope-fzf-native.nvim",
+      build = "make",
+      config = function()
+        require("telescope").load_extension("fzf")
+      end,
     },
   },
 }
