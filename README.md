@@ -11,13 +11,13 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 `
 
 # required
-mv ~/.config/nvim{,.bak}
+`mv ~/.config/nvim{,.bak}`
 
 # optional but recommended
-mv ~/.local/share/nvim{,.bak}
+`mv ~/.local/share/nvim{,.bak}
 mv ~/.local/state/nvim{,.bak}
 mv ~/.cache/nvim{,.bak}
-
+`
 
 
 git clone https://github.com/ChrisNguyen24/nvim.git ~/.config/nvim
