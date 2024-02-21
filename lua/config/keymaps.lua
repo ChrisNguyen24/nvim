@@ -10,4 +10,7 @@ local map = Util.safe_keymap_set
 map("i", "jj", "<ESC>", { desc = "Exit insert mode" })
 map("i", "kk", "<ESC>", { desc = "Exit insert mode" })
 map("i", "jk", "<ESC>", { desc = "Exit insert mode" })
+-- map("v", "<C-c>", "\"+y"); -- copy vào trong hệ thống
+
+
 

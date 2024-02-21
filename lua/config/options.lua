@@ -8,7 +8,9 @@ vim.g.autoformat = false
 local opt = vim.opt
 
 opt.autowrite = true
+
 -- tabs & indentation
+opt.smartindent = true
 opt.tabstop = 4 -- 2 spaces for tabs (prettier default)
 opt.shiftwidth = 4 -- 2 spaces for indent width
 opt.wrap = false

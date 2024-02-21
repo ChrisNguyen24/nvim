@@ -9,3 +9,17 @@ defaults write -g InitialKeyRepeat -int 8
 defaults write -g KeyRepeat -int 1
 defaults write -g ApplePressAndHoldEnabled -bool false
 `
+
+# required
+mv ~/.config/nvim{,.bak}
+
+# optional but recommended
+mv ~/.local/share/nvim{,.bak}
+mv ~/.local/state/nvim{,.bak}
+mv ~/.cache/nvim{,.bak}
+
+
+
+git clone https://github.com/ChrisNguyen24/nvim.git ~/.config/nvim
+
+
