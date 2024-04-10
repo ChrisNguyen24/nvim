@@ -22,9 +22,18 @@ mv ~/.local/state/nvim{,.bak}
 mv ~/.cache/nvim{,.bak}
 ```
 
+# Install TPM (tmux plugin manager) [https://www.youtube.com/watch?v=H70lULWJeig]
+
+`
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
+
 
 ```
 git clone https://github.com/ChrisNguyen24/nvim.git ~/.config/nvim
+
+mv ~/.tmux.conf{,.bak}
+ln -s -f ~/.config/nvim/.config/.tmux.conf ~/.tmux.conf
+
 ```
 
 
