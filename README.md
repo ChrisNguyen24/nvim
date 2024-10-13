@@ -35,5 +35,19 @@ mv ~/.tmux.conf{,.bak}
 ln -s -f ~/.config/nvim/.config/.tmux.conf ~/.tmux.conf
 
 ```
+# Structure
+
+~/.config/nvim/
+├── init.lua          # Main entry point for Neovim configuration
+├── lua/
+│   ├── config/       # Core configuration files
+│   │   ├── autocmds.lua  # Autocommands (auto triggers for certain events)
+│   │   ├── keymaps.lua   # Key mappings
+│   │   ├── lazy.lua      # Lazy.nvim plugin manager setup
+│   │   └── options.lua   # Basic editor options (settings for Neovim)
+│   ├── plugins/      # Plugin configurations and definitions
+│   │   ├── core.lua       # Main LazyVim plugin setup
+│   │   └── user.lua       # User-specific plugin configurations (optional)
+│   └── utils.lua     # Utility functions for LazyVim
 
 
