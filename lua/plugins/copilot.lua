@@ -9,8 +9,8 @@ return {
     opts = { },
     keys = {
             { "<leader>cp", ":CopilotChatToggle<CR>", mode = "n", desc = "Open Copilot Chat" },
-            { "<leader>cv", ":CopilotChatOpen<CR>", mode = "v", desc = "Open Copilot Chat" },
             { "<leader>ce", ":CopilotChatExplain<CR>", mode = "v", desc = "Explain Code" },
+            { "<leader>cc", ":CopilotChat<CR>", mode = "v", desc = "Chat with Selected Code" },
             { "<leader>cr", ":CopilotChatReview<CR>", mode = "v", desc = "Review Code" },
             { "<leader>cd", ":CopilotChatDosc<CR>", mode = "v", desc = "Generated Doc" },
 
