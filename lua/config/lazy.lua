@@ -16,6 +16,24 @@ require("lazy").setup({
     -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
     -- import/override with your plugins
     { import = "plugins" },
+    -- ✅ Set default colorscheme
+    {
+      "LazyVim/LazyVim",
+      opts = {
+        colorscheme = "vim", -- 🎨 change to "tokyonight", "gruvbox", etc.
+      },
+            init = function()
+      vim.api.nvim_create_autocmd("ColorScheme", {
+        callback = function()
+          vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+          -- vim.api.nvim_set_hl(0, "CursorLine",  { bg = "none" })
+          vim.api.nvim_set_hl(0, "Folded",  { bg = "none" })
+          -- controls the color of the dropdown completion
+          vim.api.nvim_set_hl(0, "Pmenu",       { bg = "#1e1e2e", fg = "#c0caf5" })
+        end,
+      })
+    end,
+    },
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
